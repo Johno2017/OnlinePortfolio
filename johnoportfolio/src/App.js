@@ -30,7 +30,8 @@ class App extends React.Component {
         title: "About me"
       },
       contact: {
-        title: "Let's Talk"
+        title: "Let's Talk",
+        subTitle: "Email: John.ong135@gmail.com"
       }
     };
   }
@@ -76,7 +77,12 @@ class App extends React.Component {
           <Route
             path="/contact"
             exact
-            render={() => <ContactPage title={this.state.contact.title} />}
+            render={() => (
+              <ContactPage
+                title={this.state.contact.title}
+                subTitle={this.state.contact.subTitle}
+              />
+            )}
           />
           <Footer />
         </Container>
